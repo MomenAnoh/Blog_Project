@@ -14,6 +14,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('auth');
+Route::get('/my-name', function () {
+    return response()->json(['name' => 'Momen Ahmed']);
+});
 
 
 Route::resource('section', SectionController::class);
