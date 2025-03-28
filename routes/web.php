@@ -24,10 +24,14 @@ Route::resource('Comment', CommentController::class);
 
 Route::resource('users', UserController::class);
 
+Route::get('/new-feature', function () {
+    return "Hello from the new feature!";
+});
 
-Route::get('/test222', function () {
+Route::get('/test', function () {
     return "Hello from feature branch!";
 });
+
 
 Route::get('/{page}', [App\Http\Controllers\AdminController::class,'index'])->name('home');
 
