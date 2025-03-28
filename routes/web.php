@@ -25,7 +25,7 @@ Route::resource('Comment', CommentController::class);
 Route::resource('users', UserController::class);
 
 
-Route::get('/test', function () {
+Route::get('/test222', function () {
     return "Hello from feature branch!";
 });
 
